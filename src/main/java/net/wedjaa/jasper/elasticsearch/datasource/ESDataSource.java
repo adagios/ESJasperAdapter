@@ -20,7 +20,8 @@ package net.wedjaa.jasper.elasticsearch.datasource;
 
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
@@ -36,7 +37,7 @@ public class ESDataSource implements JRDataSource {
     public static String QUERY_LANGUAGE = "elasticsearch";
     public static String ELASTIC_SEARCH = "es_search";
     
-    private static Logger logger = Logger.getLogger(ESDataSource.class);
+    private static Logger logger = LogManager.getLogger(ESDataSource.class);
     
     ESSearch esSearch = null;
     Map<String,Object> currentEvent = null;

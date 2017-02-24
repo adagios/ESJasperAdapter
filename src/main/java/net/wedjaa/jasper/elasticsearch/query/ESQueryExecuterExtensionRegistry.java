@@ -29,11 +29,12 @@ import net.sf.jasperreports.engine.query.JRQueryExecuterFactoryBundle;
 import net.sf.jasperreports.extensions.ExtensionsRegistry;
 import net.sf.jasperreports.extensions.ExtensionsRegistryFactory;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
  public class ESQueryExecuterExtensionRegistry implements ExtensionsRegistryFactory {
     
-    private static Logger logger = Logger.getLogger(ESQueryExecuterExtensionRegistry.class);
+    private static Logger logger = LogManager.getLogger(ESQueryExecuterExtensionRegistry.class);
         
 	private static final ExtensionsRegistry defaultExtensionsRegistry = new ExtensionsRegistry() {
                 

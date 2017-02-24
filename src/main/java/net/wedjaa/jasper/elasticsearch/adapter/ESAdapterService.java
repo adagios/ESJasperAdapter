@@ -20,7 +20,8 @@ package net.wedjaa.jasper.elasticsearch.adapter;
 
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import net.sf.jasperreports.data.AbstractDataAdapterService;
 import net.sf.jasperreports.engine.JRException;
@@ -46,7 +47,7 @@ public class ESAdapterService extends AbstractDataAdapterService {
     private ESSearch esSearch;
 
     private final ESAdapter dataAdapter;
-    private static Logger logger = Logger.getLogger(ESAdapterService.class);
+    private static Logger logger = LogManager.getLogger(ESAdapterService.class);
 
 	public ESAdapterService(JasperReportsContext jrContext, ESAdapter dataAdapter) {
     	super(jrContext, dataAdapter);

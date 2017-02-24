@@ -17,7 +17,8 @@
  */
 package net.wedjaa.jasper.elasticsearch.adapter;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import net.wedjaa.jasper.elasticsearch.adapter.ESAdapter;
 import net.sf.jasperreports.data.AbstractDataAdapter;
@@ -38,7 +39,7 @@ public class ESAdapterImplementation extends AbstractDataAdapter implements ESAd
     private String elasticSearchUsername;
     private String elasticSearchPassword;
     
-	Logger logger = Logger.getLogger(ESAdapterImplementation.class);
+	Logger logger = LogManager.getLogger(ESAdapterImplementation.class);
     
     public ESAdapterImplementation() {
     	super();

@@ -30,7 +30,8 @@ import net.sf.jasperreports.engine.JasperReportsContext;
 import net.sf.jasperreports.engine.design.JRDesignField;
 import net.wedjaa.elasticparser.ESSearch;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
@@ -39,7 +40,7 @@ import org.apache.log4j.Logger;
 public class ESFieldsProvider {
     
     private static ESFieldsProvider instance;
-    private static Logger logger = Logger.getLogger(ESFieldsProvider.class);
+    private static Logger logger = LogManager.getLogger(ESFieldsProvider.class);
 
     private static final Lock lock = new ReentrantLock();
 

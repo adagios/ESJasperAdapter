@@ -22,7 +22,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRDataset;
@@ -51,7 +52,7 @@ public class ESQueryExecuter extends JRAbstractQueryExecuter {
 
     private ESSearch esSearch;
     
-    private static Logger logger = Logger.getLogger(ESQueryExecuter.class);
+    private static Logger logger = LogManager.getLogger(ESQueryExecuter.class);
     
 	public ESQueryExecuter(JasperReportsContext jasperReportsContext,
 			JRDataset dataset,

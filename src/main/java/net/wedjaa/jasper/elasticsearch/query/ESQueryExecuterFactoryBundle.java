@@ -24,7 +24,8 @@ import net.sf.jasperreports.engine.query.QueryExecuterFactory;
 import net.sf.jasperreports.engine.util.JRSingletonCache;
 import net.wedjaa.jasper.elasticsearch.datasource.ESDataSource;
 
-import org.apache.log4j.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * 
@@ -39,7 +40,7 @@ public class ESQueryExecuterFactoryBundle implements JRQueryExecuterFactoryBundl
 
 	private static final String[] languages = new String[] { ESDataSource.QUERY_LANGUAGE };
 
-	private static final Logger logger = Logger.getLogger(ESQueryExecuterFactoryBundle.class);
+	private static final Logger logger = LogManager.getLogger(ESQueryExecuterFactoryBundle.class);
 	
 			
 	private ESQueryExecuterFactoryBundle() {
