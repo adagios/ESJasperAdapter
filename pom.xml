@@ -3,8 +3,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.wedjaa.jasper</groupId>
   <artifactId>jr-es-adapter</artifactId>
-  <packaging>jar</packaging>
   <version>3.0.0.COB-SNAPSHOT</version>
+  <packaging>bundle</packaging>
   <name>jr-es-adapter</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -51,6 +51,16 @@
           <target>1.7</target>
         </configuration>
       </plugin>
+	<plugin>
+		<groupId>org.apache.felix</groupId>
+		<artifactId>maven-bundle-plugin</artifactId>
+		<version>2.5.3</version>
+		<extensions>true</extensions>
+		<configuration>
+			<niceManifest>true</niceManifest>
+		</configuration>
+	</plugin>
+
 </plugins>
 </build>
 </project>
